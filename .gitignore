@@ -1,0 +1,34 @@
+# Node modules
+/node_modules/
+**/node_modules/
+
+# Build output
+/dist/
+/build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temp folders (can be large) -- excluded from repo
+/tmp/
+uploads/
+
+# Keep env files (explicitly do NOT ignore .env)
+# NOTE: .env.example remains for template use
+
+# Visual assets - keep these in repo
+!visuals/
+
+# Optional: other generated files
+coverage/
+
+# Optional: editor settings
+.vscode/
+
+# End
