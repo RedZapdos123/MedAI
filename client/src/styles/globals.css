@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Green Reddit-like Theme - Created by Mridankan Mandal */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Green Reddit-inspired palette */
+    --color-reddit-green: #46d160;
+    --color-reddit-green-hover: #37c14f;
+    --color-reddit-bg: #dae0e6;
+    --color-reddit-card: #ffffff;
+    --color-reddit-text: #1c1c1c;
+    --color-reddit-text-muted: #7c7c7c;
+    --color-reddit-border: #ccc;
+    --color-reddit-upvote: #ff4500;
+    --color-reddit-accent: #0079d3;
+    
+    /* Legacy medical colors for compatibility */
+    --color-medical-red: #ff4500;
+    --color-medical-green: #46d160;
+  }
+
+  body {
+    @apply bg-[var(--color-reddit-bg)] text-[var(--color-reddit-text)] antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+@layer components {
+  /* Reddit-style card containers */
+  .reddit-card {
+    @apply bg-[var(--color-reddit-card)] rounded-lg border border-[var(--color-reddit-border)] shadow-sm;
+  }
+
+  .reddit-button {
+    @apply bg-[var(--color-reddit-green)] text-white px-6 py-2 rounded-full font-bold hover:bg-[var(--color-reddit-green-hover)] transition-colors;
+  }
+
+  .reddit-button-outline {
+    @apply border-2 border-[var(--color-reddit-green)] text-[var(--color-reddit-green)] px-6 py-2 rounded-full font-bold hover:bg-[var(--color-reddit-green)] hover:text-white transition-colors;
+  }
+
+  /* Reddit-style gradients */
+  .reddit-gradient {
+    background: linear-gradient(135deg, var(--color-reddit-green) 0%, var(--color-reddit-accent) 100%);
+  }
+
+  .reddit-gradient-text {
+    background: linear-gradient(135deg, var(--color-reddit-green) 0%, var(--color-reddit-accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+    --color-medical-red: #DC2626;      /* Primary red (emergency/alert) */
+    --color-medical-green: #059669;    /* Primary green (health/success) */
+    --color-light-green: #10B981;      /* Light green accent */
+    --color-dark-red: #991B1B;         /* Dark red */
+    --color-bg-light: #F0FDF4;         /* Light greenish background */
+    --color-bg-card: #FFFFFF;          /* Card background */
+    --color-text-primary: #1F2937;     /* Primary text */
+    --color-text-secondary: #6B7280;   /* Secondary text */
+    --color-border: #D1D5DB;           /* Border color */
+    --color-hover-red: #B91C1C;        /* Hover state red */
+    --color-hover-green: #047857;      /* Hover state green */
+  }
+
+  body {
+    @apply bg-gradient-to-br from-green-50 via-white to-red-50 text-gray-900;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+}
+
+@layer components {
+  /* Card Styles */
+  .card {
+    @apply bg-white border-2 border-gray-200 rounded-xl shadow-sm p-6 transition-shadow hover:shadow-md;
+  }
+
+  .card-green {
+    @apply card border-[var(--color-medical-green)];
+  }
+
+  .card-red {
+    @apply card border-[var(--color-medical-red)];
+  }
+
+  .card-gray {
+    @apply card bg-gray-50;
+  }
+
+  /* Button Styles */
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-offset-2;
+  }
+
+  .btn-green {
+    @apply btn-primary bg-[var(--color-medical-green)] text-white hover:bg-[var(--color-hover-green)] focus:ring-[var(--color-light-green)];
+  }
+
+  .btn-red {
+    @apply btn-primary bg-[var(--color-medical-red)] text-white hover:bg-[var(--color-hover-red)] focus:ring-red-300;
+  }
+
+  .btn-secondary {
+    @apply btn-primary bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400;
+  }
+
+  .btn-outline-green {
+    @apply btn-primary border-2 border-[var(--color-medical-green)] text-[var(--color-medical-green)] hover:bg-green-50 focus:ring-[var(--color-light-green)];
+  }
+
+  /* Avatar Styles */
+  .avatar {
+    @apply w-10 h-10 rounded-full bg-gradient-to-br from-[var(--color-medical-red)] to-[var(--color-medical-green)] flex items-center justify-center text-white font-bold text-sm cursor-pointer transition-transform hover:scale-110;
+  }
+
+  .avatar-sm {
+    @apply w-8 h-8 rounded-full bg-[var(--color-medical-green)] flex items-center justify-center text-white font-semibold text-xs;
+  }
+
+  .avatar-user {
+    @apply avatar-sm bg-[var(--color-medical-red)];
+  }
+
+  /* Input Styles */
+  .input-field {
+    @apply w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-medical-green)] focus:border-transparent transition-all;
+  }
+
+  .textarea-field {
+    @apply input-field min-h-[120px] resize-y;
+  }
+
+  /* Link Styles */
+  .link-green {
+    @apply text-[var(--color-medical-green)] hover:underline font-medium;
+  }
+
+  .link-red {
+    @apply text-[var(--color-medical-red)] hover:underline font-medium;
+  }
+
+  /* Badge Styles */
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .badge-green {
+    @apply badge bg-green-100 text-[var(--color-medical-green)];
+  }
+
+  .badge-red {
+    @apply badge bg-red-100 text-[var(--color-medical-red)];
+  }
+
+  .badge-gray {
+    @apply badge bg-gray-100 text-gray-700;
+  }
+
+  /* Medical-specific Styles */
+  .disclaimer {
+    @apply text-sm text-gray-600 italic bg-yellow-50 border-l-4 border-yellow-400 p-3 rounded;
+  }
+
+  .crisis-banner {
+    @apply bg-red-50 border-2 border-[var(--color-medical-red)] rounded-xl p-4 text-[var(--color-dark-red)];
+  }
+
+  .success-message {
+    @apply bg-green-50 border-2 border-[var(--color-medical-green)] rounded-xl p-4 text-[var(--color-hover-green)];
+  }
+
+  /* Tab Styles */
+  .tab {
+    @apply px-6 py-3 font-semibold text-gray-600 border-b-4 border-transparent hover:text-[var(--color-medical-green)] hover:border-green-200 transition-all cursor-pointer;
+  }
+
+  .tab-active {
+    @apply tab text-[var(--color-medical-green)] border-[var(--color-medical-green)];
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .gradient-medical {
+    background: linear-gradient(135deg, var(--color-medical-green) 0%, var(--color-light-green) 50%, var(--color-medical-red) 100%);
+  }
+
+  .text-gradient-medical {
+    background: linear-gradient(135deg, var(--color-medical-red), var(--color-medical-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
